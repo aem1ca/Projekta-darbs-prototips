@@ -1019,8 +1019,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e845a1164e6149c4bbc7e6904844d163, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerController
-  moveSpeed: 10
-  jumpForce: 15
+  moveSpeed: 30
+  jumpForce: 20
   groundCheck: {fileID: 48752695}
   groundDistance: 0.3
   groundMask:
@@ -1965,7 +1965,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d64b8b47d368574faa52f13705be165, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WallGoUp
-  speed: 4
+  speed: 2
 --- !u!61 &1026823359
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2020,7 +2020,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1026823353}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -3777,7 +3777,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d64b8b47d368574faa52f13705be165, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WallGoUp
-  speed: 4
+  speed: 3
 --- !u!50 &2123960379
 Rigidbody2D:
   serializedVersion: 5
@@ -3786,7 +3786,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2123960372}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -3953,7 +3953,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2139306276}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -3984,7 +3984,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d64b8b47d368574faa52f13705be165, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WallGoUp
-  speed: 4
+  speed: 3
 --- !u!1001 &4775047048193431899
 PrefabInstance:
   m_ObjectHideFlags: 0
