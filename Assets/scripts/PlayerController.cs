@@ -13,28 +13,44 @@ public class PlayerController : MonoBehaviour
 
     private Rigidbody2D rb;
     private bool isGrounded;
+    private Animator anim; // 👈 add this
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        anim = GetComponent<Animator>(); // 👈 add this
     }
 
     void Update()
     {
         // Ground check
-        isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundDistance, groundMask);
+        isGrounded = Physics2D.OverlapCircle(
+            groundCheck.position,
+            groundDistance,
+            groundMask
+        );
 
         // Jump
         if (Input.GetButtonDown("Jump") && isGrounded)
         {
-            rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
+            rb.linearVelocity = new Vector2(
+                rb.linearVelocity.x,
+                jumpForce
+            );
         }
+
+        // Animation
+        anim.SetBool("isJumping", !isGrounded);
     }
 
     void FixedUpdate()
     {
-        // Move left/right
         float moveX = Input.GetAxis("Horizontal");
-        rb.linearVelocity = new Vector2(moveX * moveSpeed, rb.linearVelocity.y);
+
+        rb.linearVelocity = new Vector2(
+            moveX * moveSpeed,
+            rb.linearVelocity.y
+        );
+        Debug.Log(isGrounded);
     }
 }
